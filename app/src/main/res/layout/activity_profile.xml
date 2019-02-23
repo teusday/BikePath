@@ -6,4 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".ProfileActivity">
 
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="321dp" />
 </android.support.constraint.ConstraintLayout>
