@@ -24,4 +24,12 @@
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="427dp" />
 
+    <Button
+        android:id="@+id/profileButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to profile"
+        tools:layout_editor_absoluteX="144dp"
+        tools:layout_editor_absoluteY="501dp" />
+
 </android.support.constraint.ConstraintLayout>
