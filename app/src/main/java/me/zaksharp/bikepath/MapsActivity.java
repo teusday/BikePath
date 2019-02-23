@@ -1,5 +1,6 @@
 package me.zaksharp.bikepath;
 
+import android.content.pm.PackageManager;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 
@@ -42,5 +43,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        if(checkSelfPermission("android.permission.ACCESS_FINE_LOCATION")== PackageManager.PERMISSION_GRANTED)
+            mMap.setMyLocationEnabled(true);
     }
 }
