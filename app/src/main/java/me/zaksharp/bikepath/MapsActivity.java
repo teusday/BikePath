@@ -1,6 +1,7 @@
 package me.zaksharp.bikepath;
 
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Location;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
@@ -14,6 +15,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -77,6 +80,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         }
                     }
                 });
+
+
+        Polyline polyline1 = mMap.addPolyline(new PolylineOptions()
+                .clickable(false)
+                .add(
+                        new LatLng(43.043826, -87.903335),
+                        new LatLng(43.044136, -87.898351)));
+        polyline1.setColor(Color.GREEN);
+        polyline1.setTag("Bike Lane");
 
     }
 }
