@@ -16,16 +16,26 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
+import android.view.View;
+import android.widget.Button;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap myMap;
     private FusedLocationProviderClient fusedLocationClient;
 
+    private FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mAuth = FirebaseAuth.getInstance();
+
         MapFragment mMap = (MapFragment)getFragmentManager().findFragmentById(R.id.map);
         mMap.getMapAsync(this);
 
@@ -80,5 +90,25 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        if(currentUser == null){
+
+            sendToStart();
+
+        }
+
+    }
+
+    private void sendToStart(){
+        Intent startIntent = new Intent(this, StartActivity.class);
+        startActivity(startIntent);
+        finish();
+    }
 
 }
