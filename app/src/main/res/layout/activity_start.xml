@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/StartGrey"
+    tools:context=".StartActivity">
+
+    <ImageView
+        android:id="@+id/start_logo"
+        android:layout_width="202dp"
+        android:layout_height="198dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="93dp"
+        app:srcCompat="@drawable/ic_launcher"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="205dp" />
+
+    <Button
+        android:id="@+id/Login_Button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="98dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="138dp"
+        android:backgroundTint="@android:color/white"
+        android:text="Login" />
+
+    <Button
+        android:id="@+id/SignUp_Button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="98dp"
+        android:layout_marginEnd="91dp"
+        android:layout_marginBottom="74dp"
+        android:backgroundTint="@color/StartOrange"
+        android:text="Sign Up" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/start_logo"
+        android:layout_marginTop="41dp"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center_horizontal"
+        android:text="Bike Path"
+        android:textColor="@color/StartOrange"
+        android:textSize="60sp" />
+</RelativeLayout>
