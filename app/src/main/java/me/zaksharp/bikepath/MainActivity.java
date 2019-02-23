@@ -31,12 +31,23 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     private FirebaseAuth mAuth;
 
+    private Button profileButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         mAuth = FirebaseAuth.getInstance();
+
+        profileButton=(Button)findViewById(R.id.profileButton);
+        profileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent profileIntent = new Intent(MainActivity.this,Profile.class);
+
+            }
+        });
 
         MapFragment mMap = (MapFragment)getFragmentManager().findFragmentById(R.id.map);
         mMap.getMapAsync(this);
