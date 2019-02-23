@@ -3,6 +3,7 @@ package me.zaksharp.bikepath;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -18,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mAuth = FirebaseAuth.getInstance();
+    }
+
+    public void toMap(View view){
+        startActivity(new Intent(this, MapsActivity.class));
     }
 
 
