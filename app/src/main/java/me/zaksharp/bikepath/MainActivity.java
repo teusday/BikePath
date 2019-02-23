@@ -13,7 +13,10 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -85,8 +88,13 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         polyline1.setColor(Color.GREEN);
         polyline1.setTag("Bike Lane");
 
-
+        Marker mSnow = myMap.addMarker(new MarkerOptions()
+                .position(new LatLng(43.043933, -87.901246))
+                .title("Snow in Bike Lane")
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_MAGENTA)));
     }
+
+
 
 
     @Override
