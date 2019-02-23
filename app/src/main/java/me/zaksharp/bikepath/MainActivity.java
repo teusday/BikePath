@@ -1,5 +1,6 @@
 package me.zaksharp.bikepath;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Location;
@@ -16,8 +17,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
-import android.view.View;
-import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -60,7 +59,6 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                 break;
         }
 
-//        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
         myMap.moveCamera(CameraUpdateFactory.newLatLngZoom(here,5));
         myMap.moveCamera(CameraUpdateFactory.newLatLng(here));
 
