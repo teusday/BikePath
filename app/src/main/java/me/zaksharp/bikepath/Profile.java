@@ -3,7 +3,7 @@ package me.zaksharp.bikepath;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class ProfileActivity extends AppCompatActivity {
+public class Profile extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
